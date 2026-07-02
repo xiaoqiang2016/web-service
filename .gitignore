@@ -4,7 +4,10 @@
 .DS_Store
 .idea
 .env
-/public
+/public/build
+/public/images
+/public/index_files
+/public/storage
 /tests
 /database
 /script
