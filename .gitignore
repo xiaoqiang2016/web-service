@@ -1,0 +1,11 @@
+/node_modules
+/storage
+/vendor
+.DS_Store
+.idea
+.env
+/public
+/resources
+/tests
+/database
+/script
