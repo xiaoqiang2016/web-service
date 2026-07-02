@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #1A2A3A;
+    --color-secondary: #D9791E;
+    --color-gray-light: #F4F7FA;
+    --color-gray-cool: #6C7A89;
+    --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+@layer utilities {
+    .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
