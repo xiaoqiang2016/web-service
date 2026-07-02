@@ -18,7 +18,7 @@ Route::prefix('admin')->name('admin.')->middleware(['set.admin.locale',"VerifyCs
         Route::resource('banners', \App\Http\Controllers\Admin\BannerController::class);
         Route::resource('cases', \App\Http\Controllers\Admin\CaseController::class);
         Route::resource('messages', \App\Http\Controllers\Admin\MessageController::class);
-        Route::resource('contact-settings', \App\Http\Controllers\Admin\ContactSettingController::class);
+        Route::resource('contact-settings', \App\Http\Controllers\Admin\ContactSettingController::class)->except(['destroy']);
         Route::resource('faqs', \App\Http\Controllers\Admin\FaqController::class);
         Route::resource('admin-users', \App\Http\Controllers\Admin\AdminUserController::class);
         Route::resource('admin-roles', \App\Http\Controllers\Admin\AdminRoleController::class);
