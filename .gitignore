@@ -4,7 +4,6 @@
 .DS_Store
 .idea
 .env
-/public/build
 /public/images
 /public/index_files
 /tests
