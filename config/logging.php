@@ -54,7 +54,7 @@ return [
 
         'stack' => [
             'driver' => 'stack',
-            'channels' => explode(',', (string) env('LOG_STACK', 'single')),
+            'channels' => explode(',', (string) env('LOG_STACK', 'monthly-daily')),
             'ignore_exceptions' => false,
         ],
 
@@ -71,6 +71,13 @@ return [
             'level' => env('LOG_LEVEL', 'debug'),
             'days' => env('LOG_DAILY_DAYS', 14),
             'replace_placeholders' => true,
+        ],
+
+        'monthly-daily' => [
+            'driver' => 'custom',
+            'via' => \App\Logging\CreateMonthlyDailyLogger::class,
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => env('LOG_DAILY_DAYS', 14),
         ],
 
         'slack' => [
