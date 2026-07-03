@@ -3,9 +3,9 @@
 $currentLocale = app()->getLocale();
 $categoryTranslation = isset($category) ? ($category->translations->firstWhere('locale', $currentLocale) ?? $category->translations->first()) : null;
 @endphp
-@section('title', $categoryTranslation?->seo_title ?: 'Contact Us')
-@section('meta_description', $categoryTranslation?->seo_description ?: 'Contact us for more information')
-@section('meta_keywords', $categoryTranslation?->seo_keywords ?: 'contact, inquiry')
+@section('title', $categoryTranslation?->seo_title ?: 'Qianzhu Hardware Manufacturer')
+@section('meta_description', $categoryTranslation?->seo_description ?: 'Qianzhu Hardware Manufacturer')
+@section('meta_keywords', $categoryTranslation?->seo_keywords ?: 'Qianzhu Hardware Manufacturer')
 
 @section('content')
 

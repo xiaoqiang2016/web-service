@@ -2,10 +2,12 @@
 @php
 $currentLocale = app()->getLocale();
 $aboutPageTranslation = isset($aboutPage) ? ($aboutPage->translations->firstWhere('locale', $currentLocale) ?? $aboutPage->translations->first()) : null;
+$currentLocale = app()->getLocale();
+$categoryTranslation = isset($category) ? ($category->translations->firstWhere('locale', $currentLocale) ?? $category->translations->first()) : null;
 @endphp
-@section('title', 'Hardware Manufacturer')
-@section('meta_description', 'Professional hardware manufacturer specializing in quality hardware products')
-@section('meta_keywords', 'hardware, manufacturer, tools')
+@section('title', $categoryTranslation?->seo_title ?: 'Qianzhu Hardware Manufacturer')
+@section('meta_description', $categoryTranslation?->seo_description ?: 'Qianzhu Hardware Manufacturer')
+@section('meta_keywords', $categoryTranslation?->seo_keywords ?: 'Qianzhu Hardware Manufacturer')
 @section('content')
 @include('front.partials.header')
 <div id="banner">
