@@ -25,7 +25,8 @@ class PageController extends Controller
         $honorImages = HonorImage::where('is_show', 1)->orderBy('sort_order')->get();
         $factoryImages = FactoryImage::where('is_show', 1)->orderBy('sort_order')->get();
         $aboutPage = AboutPage::with('translations')->first();
-        return view('front.index', compact('banners', 'products', 'articles', 'cases', 'honorImages', 'factoryImages', 'aboutPage'));
+        $category = Category::where('id', 12)->with('translations')->first();
+        return view('front.index', compact('banners', 'products', 'articles', 'cases', 'honorImages', 'factoryImages', 'aboutPage', 'category'));
     }
 
     public function about()
