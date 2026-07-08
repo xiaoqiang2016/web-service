@@ -34,7 +34,7 @@ return [
     'team_description' => 'Our company aims at continuous innovation and win-win cooperation with the customers. We are to provide superior products and services with the greatest sincerity and enthusiasm. We insist on scientific and technological innovation and independent research and development.',
     'our_factory' => 'OUR FACTORY',
     'certificate' => 'Certificate',
-    'what_we_are' => 'WHAT WE ARE',
+    'what_we_are' => 'WHO WE ARE',
     'certificate_description' => 'Your trust is our greatest driving force for progress, please trust us 100 percent.',
     'scan_qr_contact' => 'Scan the QR code to contact us. We will provide you with professional consultation and advice.',
     
